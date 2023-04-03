@@ -33,7 +33,7 @@ inView library use to check in view in element.
         multipleGroup:false // default false
 
     }
-    var view = new inView(options).init();
+    new inView(options).init();
 
 </script>
 
@@ -54,7 +54,20 @@ if want to render for multile items, use ```{multipleGroup:true}``` and pass mul
         multipleGroup:true // default false
 
     }
-    var view = new inView(options).init();
+    new inView(options).init();
 
 </script>
+```
+
+## hasView event 
+call ```hasView``` event if you want to call after initialized instead of calling in options.
+
+```JS
+
+var view = new inView(options);
+view.init(); // 
+
+view.on('hasView',function(element,observe){
+    console.log(element)
+});
 ```
