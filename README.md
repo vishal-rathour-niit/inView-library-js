@@ -1,18 +1,24 @@
-# inView-library-js
+# inView JS
 
 inView library use to check in view in element.
-HTML
 
- <style>
+## HTML
+
+```css
+<style>
     .indata,.viewdta{height: 100vh;width: 100%;}
 </style>
+```
 
+```html
 <div class="indata"></div>
 <div class="viewdta 1"></div>
 <div class="viewdta 2"></div>
 <div class="viewdta 3"></div>
 <div class="viewdta 4"></div>
+```
 
+```JS
 <script src="inView.js"></script>
 
  <script>
@@ -31,9 +37,11 @@ HTML
 
 </script>
 
+```
+## for multple items
+if want to render for multile items, use ```{multipleGroup:true}``` and pass multiple elements in element.
 
-if want to render for multile items, use {multipleGroup:true} and pass multiple elements in element.
-
+```JS
  <script>
 
     var options = {
@@ -49,3 +57,4 @@ if want to render for multile items, use {multipleGroup:true} and pass multiple 
     var view = new inView(options).init();
 
 </script>
+```
