@@ -1,6 +1,6 @@
 # inView JS
 
-inView library use to check in view in element.
+InView Library for Checking If an Element is in View
 
 ## HTML
 
@@ -39,12 +39,12 @@ inView library use to check in view in element.
 
 ```
 ## for multple items
-if want to render for multile items, use ```{multipleGroup:true}``` and pass multiple elements in element.
+If you want to render multiple items, use ```{multipleGroup:true}``` and pass multiple elements to the element.
 
-```JS
+
+```
  <script>
-
-    var options = {
+    const options = {
         element:document.querySelectorAll('.viewdta'),
         hasView:function(element,observe){
                 console.log(element)
@@ -52,15 +52,14 @@ if want to render for multile items, use ```{multipleGroup:true}``` and pass mul
         rootOffset:'0px',
         threshold:0,
         multipleGroup:true // default false
-
-    }
+     }
     new inView(options).init();
 
 </script>
 ```
 
 ## hasView event 
-call ```hasView``` event if you want to call after initialized instead of calling in options.
+Call the ```hasView``` event if you want to trigger it after initialization, instead of calling it in the options.
 
 ```JS
 
